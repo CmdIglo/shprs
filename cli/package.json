@@ -18,6 +18,7 @@
     "node",
     "parser"
   ],
+  "type": "module",
   "author": "Maxwell Leu",
   "license": "ISC",
   "bugs": {
@@ -25,6 +26,8 @@
   },
   "homepage": "https://github.com/CmdIglo/shprs#readme",
   "dependencies": {
+    "boxen": "^7.0.2",
+    "chalk": "^5.2.0",
     "yargs": "^17.7.1"
   }
 }
