@@ -1,35 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-enum TOKEN_NAMES {
-	"case",
-	"coproc",
-	"do",
-	"done",
-	"elif",
-	"else",
-	"esac",
-	"fi",
-	"for",
-	"function",
-	"if",
-	"in",
-	"select",
-	"then",
-	"until",
-	"while",
-	"!",
-	"{",
-	"}",
-	"time",
-	"[[",
-	"]]"
-}
+#include "tokens.h"
 
 int main(int argc, char* argv[]) {
 	char * buffer = 0;
 	int length;
 	FILE* f = fopen(argv[0], "rb");
+
+	TOKEN_NAMES name = TOKEN_OPAREN;
 
 	if(f) {
 		fseek(f, 0, SEEK_END);
@@ -45,4 +23,9 @@ int main(int argc, char* argv[]) {
 	if(buffer) {
 		printf("%.*s", length, buffer);
 	}
+	
+	int con = name == TOKEN_OPAREN;
+	printf("%d", con);
+
 }
+
