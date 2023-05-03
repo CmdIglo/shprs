@@ -7,5 +7,5 @@ Built, because Shell is interpreted line by line, so that if there are errors in
 
 ### Note: This script will only perform lexical analysis
 
-### License
+### <ins>License</ins>
 [MIT](https://github.com/CmdIglo/shprs/blob/main/LICENSE)
